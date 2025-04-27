@@ -42,6 +42,17 @@ Capturile de rețea sunt salvate în logs/network_capture.pcap
 
 Rezultatele scanărilor YARA și ClamAV sunt salvate în logs/
 
+yara-rules/sample_rule.yar
+Descriere:
+Acest fișier conține o regulă de detecție creată cu YARA, folosită pentru a identifica fișiere executabile suspecte pe baza anumitor stringuri asociate frecvent cu malware-ul.
+
+Cum funcționează:
+Regula caută în fișiere stringuri precum h4cked_by, exploit, backdoor și rootkit.
+Dacă sunt detectate cel puțin două astfel de stringuri într-un fișier, acesta este marcat ca suspect.
+
+Utilitate:
+Ajută la descoperirea rapidă a fișierelor potențial malițioase în cadrul sandbox-ului, fără a necesita semnături antivirus complexe.
+
 Procesele active sunt salvate în logs/processes.log
 
 🔒 Notă de Securitate
