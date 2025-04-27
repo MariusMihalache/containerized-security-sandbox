@@ -1,1 +1,12 @@
+version: '3'
+
+services:
+  sandbox:
+    build: .
+    container_name: security_sandbox
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./yara-rules:/yara-rules
+      - ./logs:/opt/logs
 
